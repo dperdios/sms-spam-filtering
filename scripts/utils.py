@@ -175,9 +175,9 @@ def load_dataset(
         train_ham = full_train_ham
     elif dataset_sample_type.lower() == 'upsample':
         # Upsample the minority class (i.e. spam)
-        n_samples_to_add = full_train_ham.shape[0] - full_train_spam.shape[0]
+        n_samples = full_train_ham.shape[0]
         train_spam = sklearn.utils.resample(
-            full_train_spam, replace=True, n_samples=n_samples_to_add,
+            full_train_spam, replace=True, n_samples=n_samples,
             random_state=random_state
         )
         train_ham = full_train_ham
