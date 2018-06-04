@@ -15,7 +15,7 @@ filepath = os.path.join(os.pardir, 'datasets', 'spam.csv')
 df = load_spam_dataframe(filepath)
 
 # Save settings
-flag_save_fig = True
+flag_save_fig = False
 save_folder = os.path.join(os.pardir, 'results', 'data-exploration')
 if not os.path.exists(save_folder):
     os.makedirs(save_folder)
@@ -54,12 +54,13 @@ df1 = df1.rename(columns={0: "words", 1 : "count"})
 ###############################################################################
 # Plots
 ###############################################################################
-fig_spam = plt.figure(figsize=(12, 10))
+wc_figsize = (12, 10)
+fig_spam = plt.figure(figsize=wc_figsize)
 ax = fig_spam.add_subplot(111)
 ax.imshow(spam_wc)
 ax.set_axis_off()
 
-fig_ham = plt.figure(figsize=(12, 10))
+fig_ham = plt.figure(figsize=wc_figsize)
 ax = fig_ham.add_subplot(111)
 ax.imshow(ham_wc)
 ax.set_axis_off()
