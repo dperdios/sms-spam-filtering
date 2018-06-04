@@ -1,0 +1,7 @@
+numpy
+scipy
+matplotlib
+jupyter
+scikit-learn
+wordcloud
+pandas
