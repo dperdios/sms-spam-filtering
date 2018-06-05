@@ -1,13 +1,13 @@
 # Spam Filtering Techniques for Short Message Service
 
-Adrien Besson and Dimitris Perdios
+[Adrien Besson][abesson] and [Dimitris Perdios][dperdios]
 
 [Signal Processing Laboratory (LTS5)][lts5],
 [École Polytechnique Fédérale de Lausanne (EPFL)][epfl],
 Switzerland
 
 Final project for the [Adaptation and Learning][ee621] course given by
-[Prof. Ali H. Sayed][sayed], 2018.
+[Prof. Ali H. Sayed][asayed], 2018.
 
 > We study various short message service spam filtering techniques based on a
 Kaggle dataset composed of 5572 messages, whose 4825 are legitimate and
@@ -22,7 +22,7 @@ using 10-fold cross validation.
 We demonstrate that all the classifiers perform remarkably well in terms of
 misclassification error and that even simple linear methods, such as
 logistic regression leads to less than 2% of misclassification error.
-We study two reseampling methods that can be used to counter the
+We study two resampling methods that can be used to counter the
 class imbalance present in the training set, i.e. downsampling of the
 majority class and upsampling of the minority class.
 We show that both lead to an increase of the sensitivity at the cost of
@@ -36,7 +36,9 @@ https://github.com/dperdios/sms-spam-filtering.
 [ee621]: https://edu.epfl.ch/coursebook/en/adaptation-and-learning-EE-621
 [epfl]: https://www.epfl.ch/
 [lts5]: https://lts5www.epfl.ch
-[sayed]: https://people.epfl.ch/cgi-bin/people?id=283344&lang=en&cvlang=en
+[asayed]: https://people.epfl.ch/cgi-bin/people?id=283344&lang=en&cvlang=en
+[abesson]: https://github.com/AdriBesson
+[dperdios]: https://github.com/dperdios
 
 ## Installation
 1. Install [Python] 3.6 and optionally create a dedicated environment
@@ -52,14 +54,14 @@ https://github.com/dperdios/sms-spam-filtering.
 [python]: https://www.python.org
 
 ## Dataset
-We used the [SMS Spam Collection dataset][sms-dataset] distributed
+We used the [SMS Spam Collection dataset][sms-dataset] proposed
 by [kaggle].
 > The SMS Spam Collection is a set of SMS tagged messages that have been
 collected for SMS Spam research.
 It contains one set of SMS messages in English of 5574 messages,
 tagged acording being ham (legitimate) or spam.
 
-For simplicity, it is also stored on this repository under `datasets/spam.csv`. 
+For simplicity, it is also stored in this repository under `datasets/spam.csv`. 
 
 More info on the dataset: [link][sms-dataset]
 
@@ -75,14 +77,15 @@ training.
 * [increasing_sensitivity.ipynb]: Notebook providing an example of sensitivity
 increase by dataset resampling.
 * [data_exploration.py]: Produces the data exploration figures (stored under
-`results/data-exploration`).
+`results/data-exploration/`).
 * [classifiers_grid_search.py]: Allows to re-train the classifiers for the
-different dataset sampling strategies.
+different dataset resampling strategies.
+The trained classifiers are stored under `results/trained-classifiers/`.
 * [classifiers_scores.py]: Allows to compute the different scores on trained
-classifiers (stored under `results/trained-classifiers`).
+classifiers (which are stored under `results/trained-classifiers/`).
 * [online_learning.py]: Allows to re-run the online learning experiments.
 Note that the training will only be performed if the configuration is not
-already stored under `results/online-learning`
+already stored under `results/online-learning/`
 
 [jupyter]: https://jupyter.org/
 [data_exploration.ipynb]: https://nbviewer.jupyter.org/github/dperdios/sms-spam-filtering/blob/scripts/data_exploration.ipynb
@@ -92,6 +95,13 @@ already stored under `results/online-learning`
 [classifiers_grid_search.py]: scripts/classifiers_grid_search.py
 [classifiers_scores.py]: scripts/classifiers_scores.py
 [online_learning.py]: scripts/online_learning.py
+
+## Additional material
+* [Report]
+* [Presentation]
+
+[report]: report/sms_spam_filtering_report.pdf
+[presentation]: report/sms_spam_filtering_pres.pdf
 
 ## License
 The code is released under the terms of the [MIT license](LICENSE.txt).
