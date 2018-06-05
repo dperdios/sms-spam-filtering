@@ -88,9 +88,9 @@ Note that the training will only be performed if the configuration is not
 already stored under `results/online-learning/`
 
 [jupyter]: https://jupyter.org/
-[data_exploration.ipynb]: https://nbviewer.jupyter.org/github/dperdios/sms-spam-filtering/blob/scripts/data_exploration.ipynb
-[example_classifier.ipynb]: https://nbviewer.jupyter.org/github/dperdios/sms-spam-filtering/blob/scripts/example_classifier.ipynb
-[increasing_sensitivity.ipynb]: https://nbviewer.jupyter.org/github/dperdios/sms-spam-filtering/blob/scripts/increasing_sensitivity.ipynb
+[data_exploration.ipynb]: https://nbviewer.jupyter.org/github/dperdios/sms-spam-filtering/blob/master/scripts/data_exploration.ipynb
+[example_classifier.ipynb]: https://nbviewer.jupyter.org/github/dperdios/sms-spam-filtering/blob/master/scripts/example_classifier.ipynb
+[increasing_sensitivity.ipynb]: https://nbviewer.jupyter.org/github/dperdios/sms-spam-filtering/blob/master/scripts/increasing_sensitivity.ipynb
 [data_exploration.py]: scripts/data_exploration.py
 [classifiers_grid_search.py]: scripts/classifiers_grid_search.py
 [classifiers_scores.py]: scripts/classifiers_scores.py
