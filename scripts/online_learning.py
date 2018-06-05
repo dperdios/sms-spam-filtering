@@ -27,7 +27,7 @@ if not os.path.exists(save_folder):
 # Global cross-validation parameters
 random_state = 10
 gs_steps = 10
-n_jobs = 8
+n_jobs = -1
 cv = 10  # 10-fold cross-validation
 
 # Online learning parameters

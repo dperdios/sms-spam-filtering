@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import pickle
-from scripts.utils import (
+from utils import (
     get_text_vectorizer, load_dataset, logger,
     get_default_classifiers_grid_search
 )
@@ -12,8 +12,8 @@ from sklearn.metrics import classification_report
 ###############################################################################
 # Load dataset as DataFrame
 filepath = os.path.join(os.pardir, 'datasets', 'spam.csv')
-# dataset_sample_type = 'normal'
-dataset_sample_type = 'upsample'
+dataset_sample_type = 'normal'
+# dataset_sample_type = 'upsample'
 # dataset_sample_type = 'downsample'
 dataset_random_state = 123456
 test_size = 0.2
@@ -41,7 +41,7 @@ test_features = vectorizer.transform(full_test['message'])
 # Global cross-validation parameters
 random_state = 10
 gs_steps = 10
-n_jobs = 8
+n_jobs = -1
 cv = 10  # 10-fold cross-validation
 
 classifier_names = [
